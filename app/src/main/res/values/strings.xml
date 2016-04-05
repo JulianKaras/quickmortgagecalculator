@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QuickMortgageCalculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="principalText">Principal Amount</string>
+    <string name="interestText">Interest Rate</string>
+    <string name="yearsText">Number of Years</string>
+    <string name="paymentText">Monthly Payment</string>
+    <string name="Button">Calculate Monthly Payment</string>
+</resources>

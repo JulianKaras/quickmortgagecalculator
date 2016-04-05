@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.barkerville.quickmortgagecalculator.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/principalText"
+        android:id="@+id/principalText"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/principalEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/principalEditText"
+        android:layout_marginTop="44dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/paymentText"
+        android:layout_toEndOf="@+id/paymentText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/interestText"
+        android:id="@+id/interestText"
+        android:textSize="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/principalEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/interestEditText"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_alignTop="@+id/interestText"
+        android:layout_alignLeft="@+id/principalEditText"
+        android:layout_alignStart="@+id/principalEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yearsText"
+        android:id="@+id/yearsText"
+        android:textSize="20dp"
+        android:layout_below="@+id/interestEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yearsEditText"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_alignTop="@+id/yearsText"
+        android:layout_alignLeft="@+id/interestEditText"
+        android:layout_alignStart="@+id/interestEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paymentText"
+        android:id="@+id/paymentText"
+        android:textSize="20dp"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/monthlyPaymentET"
+        android:layout_toStartOf="@+id/monthlyPaymentET" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/monthlyPaymentET"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_alignBottom="@+id/paymentText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:id="@+id/thousandText"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/principalEditText"
+        android:layout_toEndOf="@+id/principalEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:id="@+id/percetSignText"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/interestEditText"
+        android:layout_alignBottom="@+id/interestEditText"
+        android:layout_toRightOf="@+id/interestEditText"
+        android:layout_toEndOf="@+id/interestEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/monthlyPaymentET"
+        android:layout_alignBottom="@+id/monthlyPaymentET"
+        android:layout_toRightOf="@+id/monthlyPaymentET"
+        android:layout_toEndOf="@+id/monthlyPaymentET" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/principalEditText"
+        android:layout_alignBottom="@+id/principalEditText"
+        android:layout_toLeftOf="@+id/interestEditText"
+        android:layout_toStartOf="@+id/interestEditText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button"
+        android:id="@+id/button"
+        android:layout_below="@+id/yearsEditText"
+        android:layout_alignRight="@+id/yearsEditText"
+        android:layout_alignEnd="@+id/yearsEditText"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="18dp" />
+
+
+</RelativeLayout>
